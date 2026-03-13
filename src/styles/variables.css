@@ -1,0 +1,13 @@
+/* ── Design Tokens ── */
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d2e;
+  --surface2: #252840;
+  --accent: #7c6af7;
+  --accent2: #56cfb2;
+  --accent3: #f7a76c;
+  --text: #e8eaf6;
+  --text-muted: #8b90b8;
+  --border: rgba(124, 106, 247, 0.25);
+  --glow: rgba(124, 106, 247, 0.15);
+}

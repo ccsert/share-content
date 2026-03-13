@@ -1,0 +1,62 @@
+/* ── Navigation Bar ── */
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 16px 40px;
+  background: rgba(15, 17, 23, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  position: relative;
+  z-index: 10;
+}
+
+.nav-btn {
+  padding: 8px 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.nav-btn.hover-target:hover:not(:disabled) {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 0 15px var(--glow);
+  transform: scale(1.05);
+}
+
+.nav-btn:disabled {
+  opacity: 0.3;
+}
+
+.nav-dots {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 400px;
+}
+
+.nav-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-dot.active {
+  background: var(--accent);
+  transform: scale(1.6);
+  box-shadow: 0 0 8px var(--accent);
+}
+
+.nav-dot.hover-target:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.4);
+}

@@ -1,0 +1,14 @@
+{
+  "name": "ai-collab-slides",
+  "version": "1.0.0",
+  "description": "AI协作开发工程化实践 - 演示文稿",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}
