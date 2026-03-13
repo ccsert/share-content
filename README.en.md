@@ -132,6 +132,48 @@ pnpm preview
 - Replace placeholders: topic, audience, duration, source document.
 - The output format is constrained for direct replacement of `src/slides/data.js`.
 
+## Copilot Skill (Recommended)
+
+This project ships with a `doc-to-slides` Skill. Once installed, AI automatically loads all project constraints — no manual prompt copy-pasting needed.
+
+### Why Skill > Prompt Template?
+
+| | Prompt Template | Skill |
+|---|---|---|
+| Loading | User manually copies | AI auto-detects and loads |
+| Constraint coverage | Depends on user diligence | Always loads full spec |
+| Trigger threshold | Must know the template exists | Just say "make slides" |
+| Maintenance | Template can drift from code | Single source of truth |
+
+### Installation
+
+Skill lives at `~/.agents/skills/doc-to-slides/`:
+
+```text
+doc-to-slides/
+├── SKILL.md              # Core instructions (workflow + hard rules + quality bar)
+└── references/
+    └── playbook.md       # Full technical spec (types, fields, CSS, colors)
+```
+
+With VS Code + GitHub Copilot, the skill auto-activates when you mention slides, presentations, decks, or similar keywords.
+
+### Usage
+
+Just say:
+
+```
+Turn this document into slides:
+
+[paste your content]
+```
+
+The AI will automatically:
+1. Load all constraints from the skill
+2. Analyze your document structure
+3. Present an outline for your approval
+4. Generate a drop-in replacement for `src/slides/data.js`
+
 ## How to Add or Edit Slides
 
 Edit `src/slides/data.js`. Each slide is an object. Common types:
