@@ -28,20 +28,18 @@
   align-items: center;
   padding: 48px 80px;
   opacity: 0;
-  transform: translateX(80px) scale(0.98);
-  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
   pointer-events: none;
+  /* 默认过渡 — 具体 transform 值由 data-transition CSS 控制 */
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .slide.active {
   opacity: 1;
-  transform: translateX(0) scale(1);
   pointer-events: all;
 }
 
 .slide.exit {
   opacity: 0;
-  transform: translateX(-80px) scale(0.98);
 }
 
 /* ── Slide Number Badge ── */

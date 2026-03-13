@@ -8,8 +8,22 @@
   background: rgba(15, 17, 23, 0.8);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
+  /* 默认隐藏，鼠标移至底部时显示 */
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+
+#nav.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
 }
 
 .nav-btn {
